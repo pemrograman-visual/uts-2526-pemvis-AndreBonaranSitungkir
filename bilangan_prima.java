@@ -1,3 +1,5 @@
+// 12S25026 - Andre Bonaran Situngkir
+// 12S25029 - Theressia Olivia Simanjuntak
 import java.util.*;
 import java.lang.Math;
 
