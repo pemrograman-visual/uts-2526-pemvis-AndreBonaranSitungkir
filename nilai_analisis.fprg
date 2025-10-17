@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="nilai_analisis"/>
+        <attribute name="authors" value="pc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-17 04:19:24 PM"/>
+        <attribute name="created" value="cGM7TEFQVE9QLUU3RzNCVU5FOzIwMjUtMTAtMTc7MDI6MTg6NTIgUE07MjU0NA=="/>
+        <attribute name="edited" value="cGM7TEFQVE9QLUU3RzNCVU5FOzIwMjUtMTAtMTc7MDQ6MTk6MjQgUE07MzsyNjU2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Jumlah, max, min, ratarata" type="Real" array="False" size=""/>
+            <declare name="i, n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="ns" type="Real" array="True" size="4"/>
+            <assign variable="Jumlah" expression="0"/>
+            <for variable="i" start="0" end="3" direction="inc" step="1">
+                <input variable="ns[i]"/>
+                <assign variable="Jumlah" expression="Jumlah + ns[i]"/>
+            </for>
+            <assign variable="ratarata" expression="Jumlah/4"/>
+            <assign variable="max" expression="ns[0]"/>
+            <for variable="i" start="0" end="3" direction="inc" step="1">
+                <if expression="ns[i]&gt;max">
+                    <then>
+                        <assign variable="max" expression="ns[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="min" expression="ns[0]"/>
+            <for variable="i" start="0" end="3" direction="inc" step="1">
+                <if expression="ns[i]&lt;min">
+                    <then>
+                        <assign variable="min" expression="ns[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;avg=&quot;&amp;ratarata" newline="True"/>
+            <output expression="&quot;max=&quot;&amp;max" newline="True"/>
+            <output expression="&quot;min=&quot;&amp;min" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

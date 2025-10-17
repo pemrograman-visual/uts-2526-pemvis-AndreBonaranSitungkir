@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="bilangan_prima"/>
+        <attribute name="authors" value="pc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-17 04:34:12 PM"/>
+        <attribute name="created" value="cGM7TEFQVE9QLUU3RzNCVU5FOzIwMjUtMTAtMTc7MDM6MDE6MzMgUE07MjUzNg=="/>
+        <attribute name="edited" value="cGM7TEFQVE9QLUU3RzNCVU5FOzIwMjUtMTAtMTc7MDQ6MzQ6MTIgUE07MTsyNjQ4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <for variable="i" start="2" end="n" direction="inc" step="1">
+                <if expression="isPrima[i]">
+                    <then>
+                        <output expression="i &amp; &quot; &quot;" newline="False"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+    <function name="isPrima" type="Boolean" variable="returnValue">
+        <parameters>
+            <parameter name="x" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="returnValue" type="Boolean" array="False" size=""/>
+            <if expression="x&lt;=1">
+                <then>
+                    <assign variable="returnValue" expression="False"/>
+                </then>
+                <else>
+                    <assign variable="returnValue" expression="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
